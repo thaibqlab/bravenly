@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đang chuyển hướng...</title>
+  <script>
+    // ====== CẤU HÌNH DELAY NGẪU NHIÊN (ms) ======
+    const MIN_DELAY = 5000; // 30 giây
+    const MAX_DELAY = 10000; // 90 giây
+
+    const productLinks = [
+"https://shop.bydesign.com/Bravenly/#/shop/from/19542",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B2801160",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B5952970",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B4057185",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B3811963",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B33433",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B4966003",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B181596",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B1295652",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B4133938",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19696",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19686",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19727",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19728",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19714",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19742",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19765",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19782",
+"https://shop.bydesign.com/Bravenly/#/shop/from/B181790",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19807",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19847",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19852",
+"https://shop.bydesign.com/Bravenly/#/shop/from/19916",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20063",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20131",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20145",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20163",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20166",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20181",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20235",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20236",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20239",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20278",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20311",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20317",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20318",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20334",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20435",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20462",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20469",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20490",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20510",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20540",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20575",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20628",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20674",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20680",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20699",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20710",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20713",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20718",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20752",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20800",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20810",
+"https://shop.bydesign.com/Bravenly/#/shop/from/20831"
+];
+
+    // Random delay
+    const delay =
+      Math.floor(Math.random() * (MAX_DELAY - MIN_DELAY + 1)) + MIN_DELAY;
+
+    // Random link
+    const randomIndex = Math.floor(Math.random() * productLinks.length);
+    const targetLink = productLinks[randomIndex];
+
+    // Redirect sau delay
+    setTimeout(() => {
+      window.location.href = targetLink;
+    }, delay);
+
+    // Hiển thị thời gian chờ
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("delay").innerText =
+        Math.round(delay / 1000) + " giây";
+    });
+  </script>
+</head>
+<body>
+  <p>⏳ Vui lòng đợi <strong id="delay"></strong> trước khi chuyển đến Bravenly...</p>
+</body>
+</html>
